@@ -1,0 +1,34 @@
+{
+    "name": "vytautas-uoga/commission-task-skeleton",
+    "description": "Skeleton for recruitment task",
+    "keywords": [],
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "VytautasUoga\\CommissionTask\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "VytautasUoga\\CommissionTask\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": ">=7.0",
+        "ext-bcmath": "*"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "2.16",
+        "phpunit/phpunit": "^8"
+    },
+    "config": {
+        "sort-packages": true,
+        "bin-dir": "bin"
+    },
+    "scripts": {
+        "phpunit": "phpunit",
+        "fix-cs": "php-cs-fixer fix",
+        "test-cs": "php-cs-fixer fix --dry-run -v",
+        "test": "./vendor/phpunit/phpunit/phpunit --bootstrap vendor/autoload.php tests/Service/MathTest.php"
+    }
+}
